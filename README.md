@@ -136,6 +136,5 @@ NAME=puffer WPM=55 TYPO_CHANCE=0.05 node main.js --rated
 - `logs/<timestamp>/` is written by `capture.js`.
 - `.brave-profile/` is the separate Brave profile the scripts use. It's kept apart from your normal browser profile.
 
-## Known issues
 
-- `convert.mjs` expects to be in a `scripts/` folder and uses `data/krillion_dives.json` by default. Pass the file path to it directly (for example `node convert.mjs answers.json`).
+**Note:** `convert.mjs` expects to be in a `scripts/` folder and uses `data/krillion_dives.json` by default. Pass the file path to it directly (for example `node convert.mjs answers.json`).
