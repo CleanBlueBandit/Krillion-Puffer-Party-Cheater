@@ -2,8 +2,7 @@
 
 A Node.js bot for **Puffer Party**, the multiplayer mode on [krillion.io/party](https://krillion.io/party/). It reads each category the game server sends, looks it up in a local answers database, and types answers into the game at a human-like speed. If it runs out of saved answers, it asks Google Gemini for more. It also saves answers it sees opponents use.
 
-> **Heads-up:** Using a bot in multiplayer games is usually against the game's terms and isn't fair to the people you play against. You're responsible for how you use this. The read-only tools (`questions.js`, `capture.js`) are a lower-risk way to explore how the game works.
-
+> **Heads-up:** Using a bot in multiplayer games is usually against the game's terms and isn't fair to the people you play against. This is just a fun little coding experiment.
 ## How it works
 
 1. `main.js` starts your installed **Brave** browser with remote debugging turned on, then attaches to it with Playwright over CDP. Using a real browser lets the Cloudflare check pass normally.
