@@ -10,7 +10,7 @@ A Node.js bot for **Puffer Party**, the multiplayer mode on [krillion.io/party](
 3. It listens to the game's WebSocket (`party.krillion.io/rooms/...`) for new categories, turn changes and answer results.
 4. For each category it goes through the matching list in `answers.json` and skips answers that were already used.
 5. Answers are typed by `humanTyping.mjs`, a typing simulator that varies the speed and makes and fixes neighbour-key typos. There is also an optional typo on purpose and a random wait before each answer. The pace speeds up over the first few turns.
-6. When the saved answers run out, `geminiFallback.mjs` generates batches of new ones and writes them back into `answers.json`.
+6. When the saved answers run out, `geminifallback.mjs` generates batches of new ones and writes them back into `answers.json`.
 7. When a game ends, it clicks **NEW OPPONENT** and starts again.
 
 ## Requirements
@@ -121,7 +121,7 @@ NAME=puffer WPM=55 TYPO_CHANCE=0.05 node main.js --rated
 | --- | --- |
 | `main.js` | The bot: browser control, game state, answer queue, typing |
 | `humanTyping.mjs` | Human-like typing simulator (also works as a CLI: `node humanTyping.mjs "text" --mode demo`) |
-| `geminiFallback.mjs` | Generates answers with Gemini, rotates API keys, saves results safely |
+| `geminifallback.mjs` | Generates answers with Gemini, rotates API keys, saves results safely |
 | `questions.js` | Read-only question logger |
 | `capture.js` | Records network traffic, used to work out the game protocol |
 | `update.mjs` | Scrapes Daily Dive answers into `answers.json` |
@@ -138,5 +138,4 @@ NAME=puffer WPM=55 TYPO_CHANCE=0.05 node main.js --rated
 
 ## Known issues
 
-- `main.js` imports `./geminifallback.mjs`, but the file is named `geminiFallback.mjs`. That works on Windows but fails on Linux and macOS, which have case-sensitive file systems. Rename the file or fix the import to run it there.
 - `convert.mjs` expects to be in a `scripts/` folder and uses `data/krillion_dives.json` by default. Pass the file path to it directly (for example `node convert.mjs answers.json`).
