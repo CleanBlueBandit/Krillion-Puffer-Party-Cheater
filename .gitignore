@@ -1,0 +1,8 @@
+gemini-keys.json
+answers.json.tmp
+.env
+/node_modules
+/logs
+/.brave-profile
+/stats
+/questions

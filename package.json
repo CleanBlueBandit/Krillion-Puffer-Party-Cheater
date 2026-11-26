@@ -1,0 +1,19 @@
+{
+  "name": "krillion-party-analyzer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "capture": "node capture.js",
+    "update": "node update.mjs"
+  },
+  "dependencies": {
+    "@google/genai": "^3.6.1",
+    "dotenv": "^18.0.10",
+    "playwright": "^1.49.0"
+  }
+}
